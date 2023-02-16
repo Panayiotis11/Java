@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 import java.text.NumberFormat;
 
@@ -23,30 +24,30 @@ import java.text.NumberFormat;
 	       
 	       if (rating.equals("Excellent"))
 	    	   
-	    	   raise=6;
+	    	   raise=0.06;
 	       
 	       else if (rating.equals("good"))
 	       	
-	    	   raise=4;
+	    	   raise=0.04;
 	       
 	       else if (rating.equals("poor"))
 	       
-	    	   raise= 1.5;
+	    	   raise= 0.015;
 	       else
 	    	   raise = 0;
 	       
 	       
 	       
-	       
+	      double raise_amount = currentSalary * raise ;
 	       
 	      
-	       newSalary = currentSalary + raise;
+	       newSalary = currentSalary + raise_amount;
 
 	       // Print the results
 	       NumberFormat money = NumberFormat.getCurrencyInstance();
 	       System.out.println();
 	       System.out.println("Current Salary:       " + money.format(currentSalary));
-	       System.out.println("Amount of your raise: " + money.format(raise));
+	       System.out.println("Amount of your raise: " + money.format(raise_amount));
 	       System.out.println("Your new salary:      " + money.format(newSalary));
 	    }
 	
